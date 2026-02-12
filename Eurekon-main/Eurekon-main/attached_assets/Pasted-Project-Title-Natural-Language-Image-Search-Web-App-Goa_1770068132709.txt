@@ -1,0 +1,103 @@
+Project Title: Natural Language Image Search Web App
+
+Goal:
+Build a full-stack web application MVP that allows users to upload multiple images (photos, screenshots, documents) and later search those images using normal human language queries like “UPI transaction screenshot”, “college ID card”, or “blue shirt near lake”.
+
+Tech Stack (must follow):
+
+Backend: Python + Flask
+
+Frontend: HTML, CSS, JavaScript (modern, clean UI)
+
+AI Libraries: EasyOCR (for text extraction), Pillow / NumPy (for image & color processing)
+
+Storage: Local file system + JSON file (no database, no authentication)
+
+Core Functional Requirements:
+
+A clean, modern landing page UI with:
+
+Multi-image upload section
+
+Text search bar
+
+Results gallery grid
+
+Image Upload Functionality:
+
+Users can upload multiple images at once
+
+Images are saved to a local uploads/ folder
+
+Each image is automatically processed after upload
+
+AI Processing Pipeline (Backend):
+
+OCR: Extract readable text from images using EasyOCR (for screenshots, documents, bills)
+
+Image understanding: Identify basic image type (photo, screenshot, document)
+
+Color detection: Extract dominant color and map it to human-readable colors (blue, red, green, white, etc.)
+
+Store extracted metadata (text, detected objects, colors) in a JSON file (metadata/data.json)
+
+Natural Language Search:
+
+User enters a plain-English query
+
+Backend splits query into keywords
+
+Matches keywords against stored OCR text, detected objects, and colors
+
+Assigns relevance scores and returns the most relevant images
+
+Results Display:
+
+Display matched images in a responsive grid
+
+Sort by relevance (best match first)
+
+Architecture Constraints:
+
+No database (use JSON as lightweight metadata storage)
+
+No login/authentication
+
+No cloud services
+
+MVP-focused, hackathon-ready
+
+Project Structure Requirement:
+Generate the project using a clean structure like:
+
+/uploads
+/metadata/data.json
+/ai (ocr.py, color.py, vision.py)
+/templates (index.html)
+/static (style.css, script.js)
+app.py
+requirements.txt
+
+
+UI Expectations:
+
+Modern, dark or neutral theme
+
+Clean typography
+
+Simple animations or hover effects
+
+Professional hackathon demo look
+
+Extra Instructions:
+
+Code should be beginner-friendly and well-structured
+
+Add comments explaining each major step
+
+Ensure the app can be run directly on Replit with one click
+
+The output should be a working MVP, not just mock UI
+
+Context:
+This project is being built for a college AI hackathon where judges will evaluate real-world relevance, AI usage, system design, and demo quality. Focus on clarity, correctness, and demo stability over complexity.
